@@ -52,15 +52,11 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
 
 &nbsp;&nbsp;&nbsp;&nbsp;https://forever-uselesss.github.io/
 <br>
+
 # 📧 Contact
 
 Feel free to reach out to me for any questions, feedback, or collaboration opportunities!
 
-<!-- LinkedIn -->
-<a href="https://www.linkedin.com/in/joe-jaison-t" style="text-decoration: none;" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn Profile" title="Connect on LinkedIn" /></a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<!-- Email -->
-<a href="mailto:joejaisonth@gmail.com" style="text-decoration: none;"><img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="Email Me" title="joejaisonth@gmail.com" /></a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<!-- GitHub -->
-<a href="https://github.com/Forever-Uselesss" style="text-decoration: none;" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub Profile" title="View My GitHub" /></a>
+<links>
+<!-- LinkedIn --><a href="https://www.linkedin.com/in/joe-jaison-t" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn Profile" title="Connect on LinkedIn" /></a><!-- Email --><a href="mailto:joejaisonth@gmail.com"><img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="Email Me" title="joejaisonth@gmail.com" /></a><!-- GitHub --><a href="https://github.com/Forever-Uselesss" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub Profile" title="View My GitHub" /></a>
+</links>
