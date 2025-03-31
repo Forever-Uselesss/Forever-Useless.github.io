@@ -25,6 +25,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    <br>
 
 2. Start python server:
+   
    Linux:
    ```bash
    python3 start_server.py
@@ -34,7 +35,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    python start_server.py
    ```
    <br>
-3. Open Browser and type in:
+4. Open Browser and type in:
    ```bash
    localhost:8080
    ```
