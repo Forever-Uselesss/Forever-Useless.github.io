@@ -10,7 +10,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
 
 ### To run this website locally:
 
-1. Clone this repository:<br>
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/Forever-Uselesss/forever-uselesss.github.io
@@ -21,8 +21,8 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    ```bash
    cd forever-uselesss.github.io
    ```
-
-2. Start python server: <br>
+   <br>
+2. Start python server: 
    Linux:
    ```bash
    python3 start_server.py
@@ -31,15 +31,32 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    ```bash
    python start_server.py
    ```
+   <br>
 3. Open Browser and type in:
    ```bash
    localhost:8080
    ```
+   <br>
 
-### To access this website on the web
+### To access this website on the web 
+&nbsp;&nbsp;&nbsp;&nbsp;Click on the link below or copy paste in your browser
 
-Open a web browser and type in:
+&nbsp;&nbsp;&nbsp;&nbsp;https://forever-uselesss.github.io/
 
-```
-https://forever-uselesss.github.io/
-```
+<br>   
+
+# 📧 Contact
+
+Feel free to reach out to me for any questions, feedback, or collaboration opportunities!
+
+<a href="https://www.linkedin.com/in/joe-jaison-t/" target="_blank">
+  <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn : https://www.linkedin.com/in/joe-jaison-t/" />
+</a>
+
+<a href="mailto:joejaisonth@gmail.com" target="_blank">
+  <img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="Email: joejaisonth@gmail.com" />
+</a>
+
+<a href="https://github.com/Forever-Uselesss" target="_blank">
+  <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub: https://github.com/Forever-Uselesss" />
+</a>
