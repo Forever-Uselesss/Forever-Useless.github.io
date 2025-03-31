@@ -21,8 +21,10 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    ```bash
    cd forever-uselesss.github.io
    ```
+
    <br>
-2. Start python server: 
+
+2. Start python server:
    Linux:
    ```bash
    python3 start_server.py
@@ -38,25 +40,29 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
    ```
    <br>
 
-### To access this website on the web 
+### To access this website on the web
+
 &nbsp;&nbsp;&nbsp;&nbsp;Click on the link below or copy paste in your browser
 
 &nbsp;&nbsp;&nbsp;&nbsp;https://forever-uselesss.github.io/
 
-<br>   
+<br>
 
 # 📧 Contact
 
 Feel free to reach out to me for any questions, feedback, or collaboration opportunities!
 
-<a href="https://www.linkedin.com/in/joe-jaison-t/" target="_blank">
-  <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn : https://www.linkedin.com/in/joe-jaison-t/" />
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/in/joe-jaison-t/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn Profile" title="Connect on LinkedIn" />
 </a>
 
-<a href="mailto:joejaisonth@gmail.com" target="_blank">
-  <img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="Email: joejaisonth@gmail.com" />
+<!-- Email -->
+<a href="mailto:joejaisonth@gmail.com">
+  <img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="Email Me" title="joejaisonth@gmail.com" />
 </a>
 
-<a href="https://github.com/Forever-Uselesss" target="_blank">
-  <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub: https://github.com/Forever-Uselesss" />
+<!-- GitHub -->
+<a href="https://github.com/Forever-Uselesss" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub Profile" title="View My GitHub" />
 </a>
