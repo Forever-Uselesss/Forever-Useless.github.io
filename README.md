@@ -53,9 +53,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
 &nbsp;&nbsp;&nbsp;&nbsp;Click on the link below or copy paste in your browser
 
 &nbsp;&nbsp;&nbsp;&nbsp;https://forever-uselesss.github.io/
-
 <br>
-
 # 📧 Contact
 
 Feel free to reach out to me for any questions, feedback, or collaboration opportunities!
