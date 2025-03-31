@@ -26,7 +26,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
 
 2. Start python server:
 
-   Linux:
+   🐧 Linux:
 
    ```bash
    python3 start_server.py
