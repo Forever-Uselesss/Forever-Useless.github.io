@@ -1,0 +1,38 @@
+name: Convert DOCX to PDF
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  convert-docx-to-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libreoffice
+
+    - name: Convert DOCX to PDF
+      run: |
+        mkdir -p assets/resume
+        libreoffice --headless --convert-to pdf assets/resume/*.docx --outdir assets/resume
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add assets/resume/*.pdf
+        git commit -m "Converted DOCX files to PDF"
+        git push
