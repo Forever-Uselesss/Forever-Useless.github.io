@@ -4,35 +4,91 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'assets/resume/*.docx'
   workflow_dispatch:
 
 jobs:
   convert-docx-to-pdf:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write  # Explicitly declare permissions needed for push
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/checkout@v4
       with:
-        python-version: '3.x'
+        fetch-depth: 2  # Need HEAD^ reference for diff
 
-    - name: Install dependencies
+    - name: Cache LibreOffice installation
+      uses: actions/cache@v3
+      id: cache-libreoffice
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-libreoffice-${{ hashFiles('**/*.docx') }}
+
+    - name: Install LibreOffice
+      if: steps.cache-libreoffice.outputs.cache-hit != 'true'
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libreoffice
+        sudo apt-get update -y
+        sudo apt-get install -y --no-install-recommends libreoffice-writer
+        echo "LibreOffice $(soffice --version) installed"
 
     - name: Convert DOCX to PDF
+      id: convert
       run: |
-        mkdir -p assets/resume
-        libreoffice --headless --convert-to pdf assets/resume/*.docx --outdir assets/resume
+        set -eo pipefail  # Strict error handling
+        
+        # Create timestamp file for new PDF detection
+        touch /tmp/pre-conversion-timestamp
+        
+        # Find files to process (changed or all)
+        mapfile -t files_to_process < <(
+          git diff --name-only HEAD^ HEAD -- 'assets/resume/*.docx' 2>/dev/null || 
+          find assets/resume -name '*.docx' -print 2>/dev/null
+        )
 
-    - name: Commit changes
+        (( ${#files_to_process[@]} == 0 )) && {
+          echo "⚠️ No DOCX files found to process"
+          echo "generated_pdfs=0" >> $GITHUB_OUTPUT
+          exit 0
+        }
+
+        printf 'Processing %d files:\n' "${#files_to_process[@]}"
+        printf '  - %s\n' "${files_to_process[@]}"
+
+        for file in "${files_to_process[@]}"; do
+          [ -f "$file" ] || continue
+          echo "🔄 Converting $file"
+          if ! libreoffice --headless --convert-to pdf "$file" --outdir assets/resume; then
+            echo "❌ Conversion failed for $file"
+            exit 1
+          fi
+        done
+
+        # Count PDFs newer than our timestamp
+        generated_pdfs=$(find assets/resume -name '*.pdf' -newer /tmp/pre-conversion-timestamp | wc -l)
+        echo "ℹ️ Generated $generated_pdfs new PDF file(s)"
+        echo "generated_pdfs=$generated_pdfs" >> $GITHUB_OUTPUT
+
+    - name: Commit and Push Changes
+      if: steps.convert.outputs.generated_pdfs > 0
       run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "actions@github.com"
+        # Verify PDFs exist before committing
+        if [ $(ls assets/resume/*.pdf 2>/dev/null | wc -l) -eq 0 ]; then
+          echo "❌ No PDFs found to commit"
+          exit 1
+        fi
+
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "github-actions@github.com"
         git add assets/resume/*.pdf
-        git commit -m "Converted DOCX files to PDF"
-        git push
+        
+        if ! git diff --cached --quiet; then
+          git commit -m "chore: auto-generate PDFs [skip ci]"
+          git push
+          echo "✅ Changes pushed"
+        else
+          echo "ℹ️ No changes to commit"
+        fi
