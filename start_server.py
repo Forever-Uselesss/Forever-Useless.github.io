@@ -2,6 +2,7 @@ import http.server
 import socketserver
 import threading
 import time
+import os
 
 # Define the port you want to use
 PORT = 8080
@@ -15,7 +16,37 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         global last_activity_time
         last_activity_time = time.time()  # Update the last activity time on every request
+        
+        # Check if the requested path exists
+        if not self.path_exists():
+            self.send_404()
+            return
+            
         super().do_GET()
+    
+    def path_exists(self):
+        # Translate the path to a filesystem path
+        path = self.translate_path(self.path)
+        
+        # For root path, check if index.html exists
+        if self.path == '/':
+            return os.path.exists(os.path.join(path, 'index.html')) or os.path.exists(os.path.join(path, 'index.htm'))
+        
+        # For all other paths, check if the file exists
+        return os.path.exists(path)
+    
+    def send_404(self):
+        # Check if custom 404 page exists
+        custom_404_path = os.path.join(os.getcwd(), '404.html')
+        if os.path.exists(custom_404_path):
+            self.send_response(404)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+            with open(custom_404_path, 'rb') as f:
+                self.wfile.write(f.read())
+        else:
+            # Fallback to default 404 message
+            self.send_error(404, "File not found")
 
 # Create a server class with idle timeout monitoring
 class ServerWithTimeout:
@@ -70,4 +101,3 @@ if __name__ == "__main__":
         print(f"\nAn error occurred: {e}")
         server.stop()
         exit(1)
-# This script creates a simple HTTP server that serves files from the current directory.
