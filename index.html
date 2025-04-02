@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+      }
+      h1 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+      .contact-methods {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .notice {
+        background-color: #fff3cd;
+        padding: 15px;
+        border-left: 5px solid #ffc107;
+        margin: 20px 0;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        gap: 10px;
+      }
+      .icon-link {
+        display: inline-block;
+        transition: transform 0.2s;
+      }
+      .icon-link:hover {
+        transform: scale(1.1);
+      }
+      .contact-icon {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+      }
+      .resume-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .resume-link:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my portfolio</h1>
 
+    <div class="contact-methods">
+      <h2>Contact Me:</h2>
+      <ul style="list-style: none; padding-left: 0">
+        <li class="contact-item">
+          <a
+            href="mailto:joejaisonth@gmail.com"
+            class="icon-link"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/icons/gmail.png"
+              alt="Email"
+              class="contact-icon"
+            />
+          </a>
+          <a href="mailto:joejaisonth@gmail.com" rel="noopener noreferrer"
+            >Gmail</a
+          >
+        </li>
+        <li class="contact-item">
+          <a
+            href="tel:+16478659197"
+            class="icon-link"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/icons/phone.png"
+              alt="Phone"
+              class="contact-icon"
+            />
+          </a>
+          <a href="tel:+16478659197" rel="noopener noreferrer">Cell Phone</a>
+        </li>
+        <li class="contact-item">
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            class="icon-link"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/icons/linkedin.png"
+              alt="LinkedIn"
+              class="contact-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/joe-jaison-t"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </li>
+        <li class="contact-item">
+          <a
+            href="https://github.com/Forever-Uselesss"
+            target="_blank"
+            class="icon-link"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/icons/github.png"
+              alt="GitHub"
+              class="contact-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/Forever-Uselesss"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="notice">
+      <p>
+        <strong>Note:</strong> This is a temporary page. My full portfolio is
+        under construction.
+      </p>
+      <p>
+        Checkout my progress: <a href="construction/index.py">Construction Page</a>
+      </p>
+    </div>
+
+    <h2>My Resume</h2>
+    <a
+      href="assets/resume/general-resume.pdf"
+      class="resume-link"
+      target="_blank"
+    >
+      <img src="assets/icons/download.png" alt="Resume" class="contact-icon" />
+      Download Resume (PDF)
+    </a>
+    <p>
+      <strong>Note:</strong> The PDF may not display correctly in some browsers.
+      If you encounter issues, please download the PDF using the link above.
+    </p>
+
+    <!-- PDF Embed (responsive) -->
+    <embed
+      src="assets/resume/general-resume.pdf#toolbar=0&navpanes=1&scrollbar=0&view=FitH"
+      type="application/pdf"
+      width="100%"
+      height="600px"
+      style="border: 1px solid #ddd; border-radius: 5px"
+    />
+    <p style="text-align: center; margin-top: 5px">
+      <a href="assets/resume/general-resume.pdf" download>Download PDF</a>
+    </p>
+  </body>
+</html>
