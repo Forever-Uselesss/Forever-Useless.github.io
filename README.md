@@ -53,6 +53,7 @@ Welcome to my portfolio! This repository hosts the source code for my personal w
 &nbsp;&nbsp;&nbsp;&nbsp;https://forever-uselesss.github.io/
 
 2. Acess through a QR Code
+   
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://forever-uselesss.github.io/" target="_blank" rel="noopener noreferrer"><img src="assets/icons/qr_code.png" alt="QR code" title="QR Code for my profile" /></a>
 <br>
 
