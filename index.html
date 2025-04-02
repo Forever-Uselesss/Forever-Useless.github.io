@@ -175,20 +175,74 @@
     </p>
 
     <!-- PDF Embed (responsive) -->
-    <embed
-      src="assets/resume/general-resume.pdf#toolbar=0&navpanes=1&scrollbar=0&view=FitH"
-      type="application/pdf"
-      width="100%"
-      height="600px"
-      style="border: 1px solid #ddd; border-radius: 5px"
-    />
-    <iframe
-      src="assets/resume/general-resume.pdf"
-      width="100%"
-      height="600px"
-      style="border: 1px solid #ddd; border-radius: 5px"
-      frameborder="0"
-    >
-    </iframe>
+    <div id="pdf-container">
+      <!-- Primary PDF Embed -->
+      <embed
+        src="assets/resume/general-resume.pdf#toolbar=0&navpanes=1"
+        type="application/pdf"
+        width="100%"
+        height="600px"
+        style="border: 1px solid #ddd; border-radius: 5px"
+        id="pdf-embed"
+      />
+
+      <!-- Fallback Container -->
+      <div id="pdf-fallback" style="display: none">
+        <iframe
+          src="https://docs.google.com/viewer?url=https://github.com/Forever-Uselesss/forever-uselesss.github.io/blob/main/assets/resume/general-resume.pdf&embedded=true"
+          width="100%"
+          height="600px"
+          style="border: 1px solid #ddd; border-radius: 5px"
+          frameborder="0"
+        >
+        </iframe>
+        <div style="text-align: center; margin-top: 10px">
+          <a
+            href="assets/resume/general-resume.pdf"
+            class="resume-link"
+            download
+          >
+            <img
+              src="assets/icons/download.png"
+              alt="Download"
+              class="contact-icon"
+            />
+            Download PDF Instead
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Replace with your actual website URL
+      const websiteUrl = window.location.origin;
+      const pdfUrl =
+        "https://github.com/Forever-Uselesss/forever-uselesss.github.io/blob/main/assets/resume/general-resume.pdf";
+
+      // Set up Google Docs Viewer URL
+      const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
+        websiteUrl + pdfUrl
+      )}&embedded=true`;
+      document.querySelector("#pdf-fallback iframe").src = googleViewerUrl;
+
+      // Check if PDF failed to load
+      document
+        .getElementById("pdf-embed")
+        .addEventListener("error", function () {
+          document.getElementById("pdf-fallback").style.display = "block";
+          document.getElementById("pdf-embed").style.display = "none";
+        });
+
+      // Proactively check if Chrome is blocking PDFs
+      if (navigator.userAgent.indexOf("Chrome") > -1) {
+        setTimeout(function () {
+          const pdfEmbed = document.getElementById("pdf-embed");
+          if (pdfEmbed.offsetHeight === 0 || pdfEmbed.offsetWidth === 0) {
+            document.getElementById("pdf-fallback").style.display = "block";
+            pdfEmbed.style.display = "none";
+          }
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
