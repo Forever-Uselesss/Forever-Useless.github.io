@@ -1,90 +1,126 @@
-# Joe Jaison T
-
-📍 Ottawa, Ontario | ✉️ joejaisonth@gmail.com | 📞 647-865-9197  
-🔗 [LinkedIn](https://www.linkedin.com/in/joe-jaison-t) | 🛠️ [GitHub](https://github.com/forever-useless)
 
 ---
 
 ## 🎓 Education
 
-**Bachelor of Engineering, Electrical Engineering and Computing Technology**  
-_University of Ottawa_ | Sept 2023 – Present (Expected 2028)
+**Electrical Engineering and Computing Technology**  
+*University of Ottawa, Ontario*  
+📅 Sept 2023 – Present (Expected 2028)  
+🔬 Clubs: uORocketry (Avionics Hardware Lead), uOFPGA
 
-- **Clubs:** uORocketry (Avionics Hardware Lead), uOFPGA
-
-**Diploma, Computer Systems Technician - Networking**  
-_Centennial College_ | Sept 2019 – Apr 2021
-
-- **Clubs:** Toastmasters International
-
----
-
-## 💻 Technical Skills
-
-**Embedded Systems & Hardware**  
-Altium Designer, KiCad, PCB Design (SMD/Through-Hole), STM32, ATSAME51, Rust/C/C++, JTAG, FPGA (Verilog), Arduino/Raspberry Pi
-
-**Networking & Cybersecurity**  
-DHCP/DNS/FTP, Cisco Packet Tracer, Fiber Splicing, Wireshark, Nmap, Metasploit (Lab), Firewalls
-
-**Software & DevOps**  
-Python, Go, Java, Git/GitHub Actions, Linux/Windows Admin, Flask, HTML/CSS/TypeScript
-
-**Other Tools**  
-SolidWorks, STM32CubeIDE, OpenOCD, Power BI
+**Computer Systems Technician – Networking**  
+*Centennial College, Toronto*  
+📅 Sept 2019 – Apr 2021  
+🗣️ Clubs: Toastmasters International
 
 ---
 
-## 🚀 Experience
+## 🛠️ Technical Arsenal
 
-### **Avionics Hardware Lead** | [uORocketry](https://uorocketry.ca)
+### 🔧 Embedded Systems & Hardware Design
+- Designed robust circuit schematics, BOMs, and multilayer PCBs using **Altium Designer** and **KiCad**
+- Expert in **SMD** and **through-hole** soldering, including **hot air rework**
+- Developed firmware in **Rust** and **C/C++** using **JTAG** and **Segger JLink**
+- Proficient with **STM32CubeIDE**, **probe-rs**, and **OpenOCD** on **Arch Linux**
+- Deep experience with **STM32** and **ATSAME51** microcontrollers
 
-_Sept 2023 – Present_
+### 🧪 Electronics Testing & Validation
+- Performed PCB testing using **multimeters**, **oscilloscopes**, and **analyzers**
+- Conducted **signal integrity** validation for high-speed designs
+- Ran **LTSpice** simulations and **EMI** analysis with **ANSYS**
 
-- Designed and manufactured 3+ aerospace-grade PCBs using Altium/KiCad, reducing component costs by 15% through optimized BOMs.
-- Led a 5-member sub-team to develop avionics systems for high-power rockets, programming microcontrollers in Rust/C++.
-- Collaborated with mechanical/software teams to ensure cross-system compatibility.
+### 🚀 Avionics & Leadership
+- Lead, Avionics Hardware Sub-team @ **uORocketry**: spearheading designs, mentoring engineers, and driving launch-readiness
+- Agile team leader with SCRUM experience
+- Adept at documenting specs and maintaining aerospace-grade design standards
+- Fluent in prototyping with **Arduino**, **Raspberry Pi**, and **headless SBCs**
 
-### **Site Technician/Auditor** | Yupana Inc
+### 🌐 Networking & Telecommunications
+- Engineered and configured enterprise **FTP, DNS, DHCP** infrastructure
+- Field technician @ **Bell**: fiber splicing, DSL/DSLAM support, and home networking
+- Simulated networks in **Cisco Packet Tracer**, trained in **CCNA** concepts (VLANs, routing, subnetting)
+- Managed **GSM/4G/5G** telecom projects with a focus on uptime and compliance
 
-_Jun 2022 – Aug 2023_
+### 🛡️ Cybersecurity & Monitoring
+- Pen-tested lab networks using **Wireshark**, **Nmap**, **Aircrack-ng**, **Metasploit**
+- Hardened systems with firewalls and access controls
 
-- Deployed 20+ Ericsson 4G/5G baseband units, ensuring 100% compliance with safety/regulatory standards.
-- Audited network performance data using Excel/Power BI, improving operational efficiency by 10%.
+### 💻 Software Development & Programming
+- Languages: **Java, Python, GoLang, Rust, C/C++, Verilog, Kotlin, Scheme, Prolog**
+- Web Dev: **HTML, CSS, TypeScript, Flask**
+- CI/CD and automation: **Git**, **GitHub Actions**, CLI mastery
 
-### **Field Service Technician** | Bell Canada
+### 📊 Productivity & Documentation
+- Pro in **Word, Excel, PowerPoint, Power BI**, with macros and pivot tables
+- Collaborative workflows via **Teams**, **OneDrive**, and **SharePoint**
 
-_Aug 2021 – May 2022_
+### 🧰 Tools & Misc
+- **FPGA** dev with **Altera Cyclone IV**, Verilog + BDF
+- CAD work with **SolidWorks**, **TinkerCAD**
+- Certified in **CCNA**, **CompTIA A+**
+- Admin-level knowledge of Windows/Linux environments
 
-- Installed/maintained fiber/DSL networks, resolving 50+ customer outages weekly.
-- Trained as a riser technician, splicing fiber backbones for high-rise buildings.
+### 🗣️ Soft Skills & Communication
+- Polished public speaker via **Toastmasters**
+- Strong leadership and cross-team coordination
+- Effective communicator for technical and non-technical audiences
 
-### **Computer Technician** | CDI Technologies
-
-_May 2020 – Jun 2020_
-
-- Repaired 100+ client systems, achieving a 98% satisfaction rate for timely resolutions.
+### 🌌 Astronomy
+- Operates and calibrates **equatorial telescope mounts**
+- Knowledgeable in **celestial navigation** and night-sky observation
 
 ---
 
-## 🛠️ Projects
+## 📁 Projects
 
-### **Technician Project** | Centennial College
+### Networking Infrastructure Setup (Centennial College)  
+**Grade: A+** | *Jan 2021 – Apr 2021*
+- Designed & deployed complete network topologies with **Cisco** routers/switches
+- Built secure **FTP, DNS, DHCP, HTTP/S** servers
+- Implemented firewall rules and access controls for safety
+- Collaborated and simulated designs in **Packet Tracer**
 
-_Jan 2021 – Apr 2021_
-
-- Built a scalable network with FTP/DNS/DHCP servers, reducing simulated latency by 30%.
-- Implemented firewall rules and access controls to block 100% of unauthorized traffic in testing.
-
-### **ICET Workshop** | Centennial College
-
-_Jan 2020 – Apr 2020_
-
-- Repaired 50+ school computers, streamlining documentation via ticketing systems.
+### ICET Workshop – Repair and Support (Centennial College)  
+**Grade: A** | *Jan 2020 – Apr 2020*
+- Hands-on computer repair and configuration
+- Managed service tickets and preventative maintenance
+- Directly interfaced with users for diagnostics and satisfaction
 
 ---
 
-## 🏆 Additional
+## 💼 Work Experience
 
-- **Certifications:** CCNA, CompTIA A+ (Training)
-- **Public Speaking:** Toastmasters member (2 event speeches and feedback recieved).
+### Electrical Engineer | **uORocketry, University of Ottawa**  
+📅 Sept 2023 – Present  
+- Designed avionics-grade PCBs using **Altium**/**KiCad**
+- Programmed flight-critical microcontrollers in **Rust**
+- Mentored a growing avionics sub-team and collaborated cross-discipline
+
+### Site Technician / Auditor | **Yupana Inc, Toronto**  
+📅 Jun 2022 – Aug 2023  
+- Installed **Ericsson 4G/5G** radio systems on-site
+- Managed project data via **Excel**/**Power BI**
+- Audited deployments for compliance and quality
+
+### Field Service Technician | **Bell Canada**  
+📅 Aug 2021 – May 2022  
+- Installed and serviced **Pure Fiber Internet**, DSL, and home phones
+- Trained in fiber splicing, riser work, and customer interfacing
+- Maintained Bell's reputation through stellar service and professionalism
+
+### Computer Technician | **CDI Technologies**  
+📅 May 2020 – Jun 2020  
+- Diagnosed, repaired, and configured systems to client standards
+- Worked with a technical team to meet high-volume repair targets
+
+---
+
+## 🏆 Highlights
+
+- Avionics team lead on rocketry projects — with hardware flying soon
+- Built networks from the ground up — from cabling to firewalls
+- Equal parts hardware wizard, firmware engineer, and network whisperer
+- Tech-agnostic, mission-ready, and constantly learning
+
+---
+
