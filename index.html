@@ -8,6 +8,8 @@
       name="description"
       content="TEMPORARY Portfolio of MINE, showing contact methods and resume."
     />
+    <!-- Add marked.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -21,6 +23,22 @@
         color: #2c3e50;
         border-bottom: 2px solid #3498db;
         padding-bottom: 10px;
+      }
+      /* Add styling for markdown content */
+      #markdown-resume {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+      }
+      #markdown-resume h2 {
+        color: #2c3e50;
+        border-bottom: 1px solid #3498db;
+        padding-bottom: 5px;
+      }
+      #markdown-resume a {
+        color: #3498db;
       }
       .contact-methods {
         background-color: #f8f9fa;
@@ -172,7 +190,18 @@
       </p>
     </div>
 
-    <h2>My Resume</h2>
+    <!-- Markdown Resume Section -->
+    <h2>My Resume (Web Version)</h2>
+    <div id="markdown-resume">
+      <!-- Markdown content will be rendered here by JavaScript -->
+      <p>
+        Loading resume... If this doesn't appear, please check the PDF version
+        below.
+      </p>
+    </div>
+
+    <!-- PDF Resume Section -->
+    <h2>My Resume (PDF Version)</h2>
     <a
       href="assets/resume/general-resume.pdf"
       class="resume-link"
@@ -233,18 +262,32 @@
     </div>
 
     <script>
-      // Replace with your actual website URL
-      const websiteUrl = window.location.origin;
-      const pdfUrl =
-        "https://github.com/Forever-Uselesss/forever-uselesss.github.io/blob/main/assets/resume/general-resume.pdf";
+      // Load and render Markdown resume
+      fetch("/construction/sample.md")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load Markdown");
+          return response.text();
+        })
+        .then((markdown) => {
+          document.getElementById("markdown-resume").innerHTML =
+            marked.parse(markdown);
+        })
+        .catch((error) => {
+          console.error("Error loading Markdown:", error);
+          document.getElementById("markdown-resume").innerHTML = `
+            <p>Could not load the web version of my resume. Please view the <a href="assets/resume/general-resume.pdf">PDF version</a> instead.</p>
+          `;
+        });
 
-      // Set up Google Docs Viewer URL
+      // PDF viewer fallback logic (existing code)
+      const websiteUrl = window.location.origin;
+      const pdfUrl = "assets/resume/general-resume.pdf";
+
       const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(
-        websiteUrl + pdfUrl
+        websiteUrl + "/" + pdfUrl
       )}&embedded=true`;
       document.querySelector("#pdf-fallback iframe").src = googleViewerUrl;
 
-      // Check if PDF failed to load
       document
         .getElementById("pdf-embed")
         .addEventListener("error", function () {
@@ -252,7 +295,6 @@
           document.getElementById("pdf-embed").style.display = "none";
         });
 
-      // Proactively check if Chrome is blocking PDFs
       if (navigator.userAgent.indexOf("Chrome") > -1) {
         setTimeout(function () {
           const pdfEmbed = document.getElementById("pdf-embed");
