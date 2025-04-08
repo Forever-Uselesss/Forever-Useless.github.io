@@ -31,7 +31,7 @@
 
 ### 🚀 Avionics & Leadership
 - Lead, Avionics Hardware Sub-team @ **uORocketry**: spearheading designs, mentoring engineers, and driving launch-readiness
-- Agile team leader with SCRUM experience
+- Team leader with SCRUM experience and knowledge on **Agile** methodology
 - Adept at documenting specs and maintaining aerospace-grade design standards
 - Fluent in prototyping with **Arduino**, **Raspberry Pi**, and **headless SBCs**
 
@@ -48,17 +48,17 @@
 ### 💻 Software Development & Programming
 - Languages: **Java, Python, GoLang, Rust, C/C++, Verilog, Kotlin, Scheme, Prolog**
 - Web Dev: **HTML, CSS, TypeScript, Flask**
-- CI/CD and automation: **Git**, **GitHub Actions**, CLI mastery
+-  **Git**, **GitHub Actions**, CLI mastery
 
 ### 📊 Productivity & Documentation
-- Pro in **Word, Excel, PowerPoint, Power BI**, with macros and pivot tables
+- Good with **Word, Excel, PowerPoint, Power BI**, with macros and other techniques
 - Collaborative workflows via **Teams**, **OneDrive**, and **SharePoint**
 
 ### 🧰 Tools & Misc
 - **FPGA** dev with **Altera Cyclone IV**, Verilog + BDF
 - CAD work with **SolidWorks**, **TinkerCAD**
-- Certified in **CCNA**, **CompTIA A+**
-- Admin-level knowledge of Windows/Linux environments
+- Trained in **CCNA**, **CompTIA A+**
+- Admin-level knowledge of **Windows/Linux** environments
 
 ### 🗣️ Soft Skills & Communication
 - Polished public speaker via **Toastmasters**
@@ -66,8 +66,8 @@
 - Effective communicator for technical and non-technical audiences
 
 ### 🌌 Astronomy
-- Operates and calibrates **equatorial telescope mounts**
-- Knowledgeable in **celestial navigation** and night-sky observation
+- Operates and calibrates equatorial telescope mounts
+- Knowledgeable in celestial navigation and night-sky observation
 
 ---
 
@@ -94,7 +94,7 @@
 📅 Sept 2023 – Present  
 - Designed avionics-grade PCBs using **Altium**/**KiCad**
 - Programmed flight-critical microcontrollers in **Rust**
-- Mentored a growing avionics sub-team and collaborated cross-discipline
+- Mentoring a growing avionics sub-team and collaborated cross-discipline
 
 ### Site Technician / Auditor | **Yupana Inc, Toronto**  
 📅 Jun 2022 – Aug 2023  
